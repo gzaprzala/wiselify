@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2%;
+  padding: 5% 0 2% 0;
   order: 2;
 }
 

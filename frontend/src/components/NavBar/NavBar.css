@@ -21,6 +21,9 @@
   background-color: #323437;
   color: #D1D0C5;
   order: 1;
+  position: fixed;
+  z-index: 5000;
+  left: 0;
 }
 
 .navbar-header-left {
