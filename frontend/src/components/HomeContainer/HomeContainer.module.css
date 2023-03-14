@@ -23,7 +23,7 @@
 .home-container-left-text {
   padding-left: 10%;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-direction: column;
 }
 

@@ -12,20 +12,20 @@ import geo from '@assets/img/geo.svg';
 import chem from '@assets/img/chem.svg';
 import biol from '@assets/img/biology.svg';
 import logo from '@assets/img/logo-napisy.svg';
-import './Courses.css';
+import style from './Courses.module.css';
 
 const Courses = () => {
   return (
-    <div className='courses'>
-      <div className='courses-container-mobile'>
+    <div className={style['courses']}>
+      <div className={style['courses-container-mobile']}>
         <Link to='/'>
-          <img src={logo} className='courses-logo' alt='logo' />
+          <img src={logo} className={style['courses-logo']} alt='logo' />
         </Link>
       </div>
       <NavBar />
-      <div className='courses-content'>
-        <span className='courses-span'>Lista kursów:</span>
-        <div className='courses-list'>
+      <div className={style['courses-content']}>
+        <span className={style['courses-span']}>Lista kursów:</span>
+        <div className={style['courses-list']}>
           <Link to='/'>
             <Tile name='Matematyka' image={maths} />
           </Link>

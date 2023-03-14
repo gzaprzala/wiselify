@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom';
 import logo from '@assets/img/logo-napisy.svg';
 import profile from '@assets/img/profile.svg';
 import menu from '@assets/img/menu.svg';
-import './NavBar.css';
+import style from './NavBar.module.css';
 
 const NavBar = () => {
   return (
-    <div className='navbar-header'>
-      <div className='navbar-header-left'>
-        <a href='/'>
-          <img src={logo} className='navbar-logo' alt='logo' />
-        </a>
+    <div className={style['navbar-header']}>
+      <div className={style['navbar-header-left']}>
+        <Link to='/'>
+          <img src={logo} className={style['navbar-logo']} alt='logo' />
+        </Link>
       </div>
-      <div className='navbar-header-right'>
-        <a href='/'>
-          <img src={profile} className='navbar-profile' alt='profile' />
-        </a>
-        <a href='/'>
-          <img src={menu} className='navbar-menu' alt='menu' />
-        </a>
+      <div className={style['navbar-header-right']}>
+        <Link to='/'>
+          <img src={profile} className={style['navbar-profile']} alt='profile' />
+        </Link>
+        <Link to='/'>
+          <img src={menu} className={style['navbar-menu']} alt='menu' />
+        </Link>
       </div>
     </div>
   );
