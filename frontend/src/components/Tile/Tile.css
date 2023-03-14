@@ -14,6 +14,7 @@
 
 .tile-container:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .tile-container-image {

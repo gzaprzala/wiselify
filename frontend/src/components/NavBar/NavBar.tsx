@@ -2,6 +2,7 @@ import './NavBar.css';
 import logo from '../../assets/img/logo-napisy.svg';
 import profile from '../../assets/img/profile.svg';
 import menu from '../../assets/img/menu.svg';
+import React from 'react';
 
 const NavBar = () => {
   return (

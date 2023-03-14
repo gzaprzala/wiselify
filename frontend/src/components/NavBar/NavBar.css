@@ -13,6 +13,11 @@
   width: 29px;
 }
 
+.navbar-menu:hover, .navbar-profile:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .navbar-header {
   height: 180px;
   width: 100%;

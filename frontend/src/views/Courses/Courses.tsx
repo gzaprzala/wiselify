@@ -13,6 +13,7 @@ import geo from '../../assets/img/geo.svg';
 import chem from '../../assets/img/chem.svg';
 import biol from '../../assets/img/biology.svg';
 import logo from '../../assets/img/logo-napisy.svg';
+import React from 'react';
 
 const Courses = () => {
   return (
@@ -22,7 +23,7 @@ const Courses = () => {
           <img src={logo} className='courses-logo' alt='logo' />
         </Link>
       </div>
-      <NavBar className='courses-nav' />
+      <NavBar />
       <div className='courses-content'>
         <span className='courses-span'>Lista kursów:</span>
         <div className='courses-list'>
