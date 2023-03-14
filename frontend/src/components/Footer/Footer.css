@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   background-color: #323437;
-  height: 90px;
+  height: 80px;
   width: 100%;
+  order: 3;
 }
 
 .footer-box {
@@ -27,4 +28,10 @@
 a {
   text-decoration: none;
   color: #D1D0C580
+}
+
+@media only screen and (max-device-width: 430px) {
+  .footer {
+    display: none;
+  }
 }

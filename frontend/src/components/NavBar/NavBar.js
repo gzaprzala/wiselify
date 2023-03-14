@@ -1,7 +1,7 @@
 import './NavBar.css';
-import logo from '../../assets/logo-napisy.png';
-import profile from '../../assets/profile.png';
-import menu from '../../assets/menu.png';
+import logo from '../../assets/img/logo-napisy.svg';
+import profile from '../../assets/img/profile.svg';
+import menu from '../../assets/img/menu.svg';
 
 const NavBar = () => {
   return (

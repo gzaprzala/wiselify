@@ -1,0 +1,35 @@
+.tile-container {
+  height: 150px;
+  width: 300px;
+  background: #E2B714;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  color: #323437;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.tile-container:hover {
+  cursor: pointer;
+}
+
+.tile-container-image {
+  width: 90px;
+  height: 90px;
+}
+
+@media only screen and (max-device-width: 430px) {
+  .tile-container {
+    width: 150px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .tile-container-image {
+    width: 41px;
+    height: 41px;
+  }
+}
