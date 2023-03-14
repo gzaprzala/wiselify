@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './views/Home/Home';
 import Courses from './views/Courses/Courses';
-import React from 'react';
 
 const App = () => {
   return (

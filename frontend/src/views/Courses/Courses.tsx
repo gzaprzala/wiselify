@@ -13,7 +13,6 @@ import geo from '../../assets/img/geo.svg';
 import chem from '../../assets/img/chem.svg';
 import biol from '../../assets/img/biology.svg';
 import logo from '../../assets/img/logo-napisy.svg';
-import React from 'react';
 
 const Courses = () => {
   return (

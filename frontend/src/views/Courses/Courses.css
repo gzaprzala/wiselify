@@ -37,6 +37,11 @@
   display: none;
 }
 
+.courses-logo {
+  height: 127px;
+  width: 315px;
+}
+
 @media screen and (max-width: 500px) {
   .courses-list {
     width: 100%;
@@ -49,7 +54,7 @@
     align-items: center;
     justify-content: center;
     align-self: flex-start;
-    padding-top: 2%;
+    padding-top: 7%;
   }
 
   .courses-content {

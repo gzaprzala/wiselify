@@ -6,7 +6,6 @@ import history from '../../assets/img/history.svg';
 import js from '../../assets/img/js.svg';
 import html from '../../assets/img/html.svg';
 import logo from '../../assets/img/logo-napisy.svg';
-import React from 'react';
 
 const HomeContainer = () => {
   return (
