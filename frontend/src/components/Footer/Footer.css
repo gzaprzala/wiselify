@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #323437;
+  height: 90px;
+  width: 100%;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: center;
+  background-color: #2C2E31;
+  width: 736px;
+  height: 40px;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.footer-box-links {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #D1D0C580
+}

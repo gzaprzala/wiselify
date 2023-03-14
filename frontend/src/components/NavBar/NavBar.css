@@ -27,7 +27,7 @@
   flex-direction: row;
   justify-content: flex-start;
   width: 50%;
-  padding-left: 116px;
+  padding-left: 50px;
 }
 
 .navbar-header-right {
@@ -35,6 +35,6 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 50%;
-  padding-right: 116px;
+  padding-right: 50px;
   gap: 20px;
 }
