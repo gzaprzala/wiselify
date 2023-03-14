@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './views/Home/Home';
+import Home from '@views/Home/Home';
 import Courses from './views/Courses/Courses';
 
 const App = () => {

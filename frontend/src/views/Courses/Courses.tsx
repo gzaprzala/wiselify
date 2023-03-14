@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
+import NavBar from '@components/NavBar/NavBar';
+import Tile from '@components/Tile/Tile';
+import maths from '@assets/img/math.svg';
+import history from '@assets/img/history.svg';
+import js from '@assets/img/js.svg';
+import html from '@assets/img/html.svg';
+import physics from '@assets/img/physics.svg';
+import java from '@assets/img/java.svg';
+import python from '@assets/img/python.svg';
+import geo from '@assets/img/geo.svg';
+import chem from '@assets/img/chem.svg';
+import biol from '@assets/img/biology.svg';
+import logo from '@assets/img/logo-napisy.svg';
 import './Courses.css';
-import NavBar from '../../components/NavBar/NavBar';
-import Tile from '../../components/Tile/Tile';
-import maths from '../../assets/img/math.svg';
-import history from '../../assets/img/history.svg';
-import js from '../../assets/img/js.svg';
-import html from '../../assets/img/html.svg';
-import physics from '../../assets/img/physics.svg';
-import java from '../../assets/img/java.svg';
-import python from '../../assets/img/python.svg';
-import geo from '../../assets/img/geo.svg';
-import chem from '../../assets/img/chem.svg';
-import biol from '../../assets/img/biology.svg';
-import logo from '../../assets/img/logo-napisy.svg';
 
 const Courses = () => {
   return (

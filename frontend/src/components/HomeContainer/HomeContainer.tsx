@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
+import Tile from '@components/Tile/Tile';
+import maths from '@assets/img/math.svg';
+import history from '@assets/img/history.svg';
+import js from '@assets/img/js.svg';
+import html from '@assets/img/html.svg';
+import logo from '@assets/img/logo-napisy.svg';
 import './HomeContainer.css';
-import Tile from '../Tile/Tile';
-import maths from '../../assets/img/math.svg';
-import history from '../../assets/img/history.svg';
-import js from '../../assets/img/js.svg';
-import html from '../../assets/img/html.svg';
-import logo from '../../assets/img/logo-napisy.svg';
 
 const HomeContainer = () => {
   return (
