@@ -58,8 +58,9 @@
   }
 
   .navbar-header {
-    height: 10%;
+    height: 7%;
     position: fixed;
     bottom: 0;
+    background-color: #2C2E31;
   }
 }
