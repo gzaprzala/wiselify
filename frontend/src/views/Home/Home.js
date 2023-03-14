@@ -3,9 +3,9 @@ import NavBar from '../../components/NavBar/NavBar';
 import HomeContainer from '../../components/HomeContainer/HomeContainer';
 import Footer from '../../components/Footer/Footer';
 
-const App = () => {
+const Home = () => {
   return (
-    <div className='App'>
+    <div className='Home'>
       <NavBar />
       <HomeContainer />
       <Footer />
@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
