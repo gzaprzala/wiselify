@@ -111,7 +111,7 @@ button {
 	outline: inherit;
 }
 
-@media only screen and (max-device-width: 430px) {
+@media screen and (max-width: 500px) {
   .home-container {
     flex-direction: column-reverse;
     width: 100%;

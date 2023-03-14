@@ -5,7 +5,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-.Home {
+.home {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -13,8 +13,8 @@ body {
   width: 100vw;
 }
 
-@media only screen and (max-device-width: 430px) {
-  .Home {
+@media screen and (max-width: 500px) {
+  .home {
     flex-direction: column-reverse;
   }
 }

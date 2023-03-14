@@ -30,7 +30,7 @@ a {
   color: #D1D0C580
 }
 
-@media only screen and (max-device-width: 430px) {
+@media screen and (max-width: 500px) {
   .footer {
     display: none;
   }

@@ -21,7 +21,7 @@
   height: 90px;
 }
 
-@media only screen and (max-device-width: 430px) {
+@media screen and (max-width: 500px) {
   .tile-container {
     width: 150px;
     height: 70px;

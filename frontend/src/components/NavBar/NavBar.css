@@ -44,7 +44,7 @@
   display: none;
 }
 
-@media only screen and (max-device-width: 430px) {
+@media screen and (max-width: 500px) {
   .navbar-header-left {
     order: 5;
     display: none;
