@@ -1,0 +1,40 @@
+.navbar-logo {
+  height: 127px;
+  width: 315px;
+}
+
+.navbar-menu {
+  height: 35px;
+  width: 35px;
+}
+
+.navbar-profile {
+  height: 35px;
+  width: 29px;
+}
+
+.navbar-header {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #323437;
+  color: #D1D0C5;
+}
+
+.navbar-header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+  padding-left: 116px;
+}
+
+.navbar-header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50%;
+  padding-right: 116px;
+  gap: 20px;
+}
