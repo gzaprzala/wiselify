@@ -1,0 +1,130 @@
+.lesson-container {
+	text-align: center;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	align-items: center;
+}
+
+.lesson-container-mobile {
+	display: none;
+}
+
+.lesson {
+	text-align: center;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	align-items: center;
+}
+
+.lesson-main {
+	order: 3;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background-color: #2c2e31;
+	border-radius: 15px;
+	color: #d1d0c5;
+	font-size: 28px;
+	font-weight: 400;
+	padding-bottom: 15px;
+}
+
+.lesson-content-upper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.lesson-content-upper-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 200px;
+}
+
+.lesson-span {
+	order: 2;
+	color: #d1d0c5;
+	font-size: 32px;
+}
+
+.lesson-span-color {
+	color: #e2b714;
+	font-size: 24px;
+	padding: 15px 0;
+}
+
+.lesson-span-normal {
+	font-size: 20px;
+	text-align: left;
+}
+
+.lesson-content {
+	order: 1;
+	padding: 220px 0 50px 0;
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.lesson-arrow {
+	width: 100px;
+	height: 61px;
+}
+
+@media screen and (max-width: 500px) {
+	.lesson-list {
+		width: 100%;
+	}
+
+	.lesson-main {
+		width: 99%;
+		font-size: 24px;
+	}
+
+	.lesson-span-color {
+		font-size: 24px;
+		padding: 10px 0;
+	}
+
+	.lesson-container-mobile {
+		display: flex;
+		order: 1;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		align-self: flex-start;
+		padding-top: 7%;
+	}
+
+	.lesson-content {
+		order: 1;
+		padding: 50px 0;
+	}
+
+	.lesson-span {
+		font-size: 24px;
+	}
+
+	.lesson-content-upper-text {
+		padding: 0 30px;
+	}
+
+	.lesson-arrow {
+		width: 78px;
+		height: 50px;
+	}
+}
