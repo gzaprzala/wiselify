@@ -1,0 +1,37 @@
+.tile {
+	display: flex;
+	height: 70px;
+	width: 500px;
+	background: #e2b714;
+	box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	color: #323437;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.tile:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+.tile-text {
+	padding-left: 20px;
+	text-align: left;
+	width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.tile {
+		height: 50px;
+		width: 350px;
+		font-size: 22px;
+		font-weight: 500;
+	}
+
+	.tile-text {
+		padding-left: 10px;
+	}
+}
