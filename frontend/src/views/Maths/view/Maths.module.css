@@ -8,10 +8,6 @@
 	align-items: center;
 }
 
-.maths-container-mobile {
-	display: none;
-}
-
 .maths {
 	text-align: center;
 	height: 100vh;
@@ -47,24 +43,25 @@
 	flex-direction: column;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+	.maths-container {
+		overflow-y: scroll;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.maths-container::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
 	.maths-list {
 		width: 100%;
 	}
 
-	.maths-container-mobile {
-		display: flex;
-		order: 1;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		align-self: flex-start;
-		padding-top: 7%;
-	}
-
 	.maths-content {
 		order: 1;
-		padding: 80px 0;
+		padding: 30px 0;
 	}
 
 	.maths-span {

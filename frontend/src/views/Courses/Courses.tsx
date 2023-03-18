@@ -11,17 +11,13 @@ import python from '@assets/img/python.svg';
 import geo from '@assets/img/geo.svg';
 import chem from '@assets/img/chem.svg';
 import biol from '@assets/img/biology.svg';
-import logo from '@assets/img/logo-napisy.svg';
 import style from './Courses.module.css';
+import MobileLogo from '@/components/MobileLogo/MobileLogo';
 
 const Courses = () => {
 	return (
 		<div className={style['courses']}>
-			<div className={style['courses-container-mobile']}>
-				<Link to='/'>
-					<img src={logo} className={style['courses-logo']} alt='logo' />
-				</Link>
-			</div>
+			<MobileLogo />
 			<NavBar />
 			<div className={style['courses-content']}>
 				<span className={style['courses-span']}>Lista kursów:</span>

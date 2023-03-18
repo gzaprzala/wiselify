@@ -1,13 +1,13 @@
 .home {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
 }
 
-@media screen and (max-width: 500px) {
-  .home {
-    flex-direction: column-reverse;
-  }
+@media screen and (max-width: 600px) {
+	.home {
+		flex-direction: column-reverse;
+	}
 }

@@ -23,7 +23,7 @@
 	width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	.tile {
 		height: 50px;
 		width: 350px;

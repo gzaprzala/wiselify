@@ -1,17 +1,13 @@
+import MobileLogo from '@/components/MobileLogo/MobileLogo';
 import NavBar from '@/components/NavBar/NavBar';
 import ThinTile from '@/components/ThinTile/ThinTile';
-import logo from '@assets/img/logo-napisy.svg';
 import { Link } from 'react-router-dom';
 import style from './Maths.module.css';
 
 const Maths = () => {
 	return (
 		<div className={style['maths-container']}>
-			<div className={style['maths-container-mobile']}>
-				<Link to='/'>
-					<img src={logo} className={style['maths-logo']} alt='logo' />
-				</Link>
-			</div>
+			<MobileLogo />
 			<NavBar />
 			<div className={style['maths-content']}>
 				<span className={style['maths-span']}>Dostępne lekcje:</span>

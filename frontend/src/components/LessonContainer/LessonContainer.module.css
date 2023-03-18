@@ -85,7 +85,12 @@
 	height: 61px;
 }
 
-@media screen and (max-width: 500px) {
+.lesson-logo {
+	height: 127px;
+	width: 315px;
+}
+
+@media screen and (max-width: 600px) {
 	.lesson-list {
 		width: 100%;
 	}
