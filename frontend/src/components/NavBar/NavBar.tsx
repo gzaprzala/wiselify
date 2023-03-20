@@ -21,16 +21,14 @@ const NavBar = () => {
       </div>
       <ul className={style['navbar-right']}>
         <li>
-          <Link to='#'>
-            <img
-              src={profile}
-              className={style['navbar-profile-icon']}
-              alt='profile'
-              onClick={() => {
-                setProfileActive(!profileActive);
-              }}
-            />
-          </Link>
+          <img
+            src={profile}
+            className={style['navbar-profile-icon']}
+            alt='profile'
+            onClick={() => {
+              setProfileActive(!profileActive);
+            }}
+          />
         </li>
         <ul
           className={
@@ -39,18 +37,22 @@ const NavBar = () => {
               : style['navbar-profile-drop']
           }>
           <li>
-            <img
-              src={settings}
-              alt='settings'
-              className={style['navbar-profile-icon-state']}
-            />
+            <Link to='#'>
+              <img
+                src={settings}
+                alt='settings'
+                className={style['navbar-profile-icon-state']}
+              />
+            </Link>
           </li>
           <li>
-            <img
-              src={achievements}
-              alt='settings'
-              className={style['navbar-profile-icon-state']}
-            />
+            <Link to='#'>
+              <img
+                src={achievements}
+                alt='settings'
+                className={style['navbar-profile-icon-state']}
+              />
+            </Link>
           </li>
         </ul>
         <ul
@@ -60,31 +62,33 @@ const NavBar = () => {
               : style['navbar-menu-drop']
           }>
           <li>
-            <img
-              src={signin}
-              alt='signin'
-              className={style['navbar-profile-icon-state']}
-            />
+            <Link to='/login'>
+              <img
+                src={signin}
+                alt='signin'
+                className={style['navbar-profile-icon-state']}
+              />
+            </Link>
           </li>
           <li>
-            <img
-              src={signout}
-              alt='signout'
-              className={style['navbar-profile-icon-state']}
-            />
+            <Link to='#'>
+              <img
+                src={signout}
+                alt='signout'
+                className={style['navbar-profile-icon-state']}
+              />
+            </Link>
           </li>
         </ul>
         <li>
-          <Link to='#'>
-            <img
-              src={menu}
-              className={style['navbar-menu-icon']}
-              alt='menu'
-              onClick={() => {
-                setMenuActive(!menuActive);
-              }}
-            />
-          </Link>
+          <img
+            src={menu}
+            className={style['navbar-menu-icon']}
+            alt='menu'
+            onClick={() => {
+              setMenuActive(!menuActive);
+            }}
+          />
         </li>
       </ul>
     </div>

@@ -68,6 +68,11 @@
   font-size: 28px;
 }
 
+.home-container-left-tiles-courses:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .home-container-left-text-medium,
 .home-container-right-text-medium {
   font-weight: 500;
