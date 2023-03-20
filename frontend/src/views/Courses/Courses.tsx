@@ -15,47 +15,47 @@ import style from './Courses.module.css';
 import MobileLogo from '@/components/MobileLogo/MobileLogo';
 
 const Courses = () => {
-	return (
-		<div className={style['courses']}>
-			<MobileLogo />
-			<NavBar />
-			<div className={style['courses-content']}>
-				<span className={style['courses-span']}>Lista kursów:</span>
-				<div className={style['courses-list']}>
-					<Link to='/courses/maths'>
-						<Tile name='Matematyka' image={maths} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Historia' image={history} />
-					</Link>
-					<Link to='/'>
-						<Tile name='JavaScript' image={js} />
-					</Link>
-					<Link to='/'>
-						<Tile name='HTML' image={html} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Fizyka' image={physics} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Java' image={java} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Python' image={python} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Geografia' image={geo} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Chemia' image={chem} />
-					</Link>
-					<Link to='/'>
-						<Tile name='Biologia' image={biol} />
-					</Link>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className={style['courses']}>
+      <MobileLogo />
+      <NavBar />
+      <div className={style['courses-content']}>
+        <span className={style['courses-span']}>Lista kursów:</span>
+        <div className={style['courses-list']}>
+          <Link to='/courses/maths'>
+            <Tile name='Matematyka' image={maths} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Historia' image={history} />
+          </Link>
+          <Link to='/'>
+            <Tile name='JavaScript' image={js} />
+          </Link>
+          <Link to='/'>
+            <Tile name='HTML' image={html} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Fizyka' image={physics} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Java' image={java} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Python' image={python} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Geografia' image={geo} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Chemia' image={chem} />
+          </Link>
+          <Link to='/'>
+            <Tile name='Biologia' image={biol} />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Courses;

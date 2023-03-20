@@ -1,21 +1,17 @@
 .mobile-logo-container {
-	display: none;
+  display: none;
 }
 
 .mobile-logo {
-	height: 127px;
-	width: 315px;
+  height: 127px;
+  width: 315px;
 }
 
 @media screen and (max-width: 600px) {
-	.mobile-logo-container {
-		display: flex;
-		order: 1;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		align-self: flex-start;
-		padding-top: 7%;
-		margin-bottom: 50px;
-	}
+  .mobile-logo-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 }

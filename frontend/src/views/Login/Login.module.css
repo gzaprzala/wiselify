@@ -1,0 +1,21 @@
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container-content {
+  padding-top: 200px;
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container-content-div {
+  width: 400px;
+  height: 400px;
+}
