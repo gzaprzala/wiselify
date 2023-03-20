@@ -123,6 +123,17 @@ button {
   .home-container-right-tiles {
     width: 80%;
   }
+
+  .home-container-left-text-medium,
+  .home-container-right-text-medium {
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  .home-container-left-text-normal {
+    font-weight: 300;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 800px) {
