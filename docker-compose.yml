@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - POSTGRES_USER=${DB_USER:?DB_USER is not set}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:?DB_PASSWORD is not set}
+      - POSTGRES_DB=${DB_NAME:?DB_NAME is not set}
+    ports:
+      - '5432:5432'
