@@ -26,6 +26,9 @@ const NavBar = () => {
             className={style['navbar-profile-icon']}
             alt='profile'
             onClick={() => {
+              menuActive
+                ? setMenuActive(!menuActive)
+                : setMenuActive(menuActive);
               setProfileActive(!profileActive);
             }}
           />
@@ -37,21 +40,13 @@ const NavBar = () => {
               : style['navbar-profile-drop']
           }>
           <li>
-            <Link to='#'>
-              <img
-                src={settings}
-                alt='settings'
-                className={style['navbar-profile-icon-state']}
-              />
+            <Link to='#' className={style['navbar-link']}>
+              <span className={style['navbar-dropdown-span']}>Ustawienia</span>
             </Link>
           </li>
           <li>
-            <Link to='#'>
-              <img
-                src={achievements}
-                alt='settings'
-                className={style['navbar-profile-icon-state']}
-              />
+            <Link to='#' className={style['navbar-link']}>
+              <span className={style['navbar-dropdown-span']}>Osiągnięcia</span>
             </Link>
           </li>
         </ul>
@@ -62,33 +57,30 @@ const NavBar = () => {
               : style['navbar-menu-drop']
           }>
           <li>
-            <Link to='/login'>
-              <img
-                src={signin}
-                alt='signin'
-                className={style['navbar-profile-icon-state']}
-              />
+            <Link to='/login' className={style['navbar-link']}>
+              <span className={style['navbar-dropdown-span']}>Zaloguj się</span>
             </Link>
           </li>
           <li>
-            <Link to='#'>
-              <img
-                src={signout}
-                alt='signout'
-                className={style['navbar-profile-icon-state']}
-              />
+            <Link to='#' className={style['navbar-link']}>
+              <span className={style['navbar-dropdown-span']}>Wyloguj się</span>
             </Link>
           </li>
         </ul>
         <li>
-          <img
-            src={menu}
-            className={style['navbar-menu-icon']}
-            alt='menu'
-            onClick={() => {
-              setMenuActive(!menuActive);
-            }}
-          />
+          <Link to='#' className={style['navbar-link']}>
+            <img
+              src={menu}
+              className={style['navbar-menu-icon']}
+              alt='menu'
+              onClick={() => {
+                profileActive
+                  ? setProfileActive(!profileActive)
+                  : setProfileActive(profileActive);
+                setMenuActive(!menuActive);
+              }}
+            />
+          </Link>
         </li>
       </ul>
     </div>
