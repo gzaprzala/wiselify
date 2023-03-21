@@ -2,16 +2,13 @@ import { Link } from 'react-router-dom';
 import logo from '@assets/img/logo-napisy.svg';
 import profile from '@assets/img/profile.svg';
 import menu from '@assets/img/menu.svg';
-import settings from '@assets/img/settings.svg';
-import achievements from '@assets/img/achievements.svg';
-import signin from '@assets/img/sign-in.svg';
-import signout from '@assets/img/sign-out.svg';
 import style from './NavBar.module.css';
 import { useState } from 'react';
 
 const NavBar = () => {
   const [profileActive, setProfileActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+
   return (
     <div className={style['navbar']}>
       <div className={style['navbar-left']}>
