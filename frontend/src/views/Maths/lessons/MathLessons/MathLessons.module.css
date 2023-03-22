@@ -1,4 +1,4 @@
-.mathlessons-container {
+/* .mathlessons-container {
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -8,8 +8,9 @@
   align-items: center;
 }
 
-.mathlessons-container-mobile {
-  display: none;
+.mathlessons-image {
+  transform: scale(0.6);
+  overflow-x: hidden;
 }
 
 .mathlessons {
@@ -23,19 +24,15 @@
 }
 
 .mathlessons-main {
-  order: 3;
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: #2c2e31;
   border-radius: 15px;
-  color: #d1d0c5;
-  font-size: 28px;
-  font-weight: 400;
   padding-bottom: 15px;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
 }
 
 .mathlessons-content-upper {
@@ -43,6 +40,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .mathlessons-content-upper-text {
@@ -65,20 +63,16 @@
   padding: 15px 0;
 }
 
-.mathlessons-span-normal {
-  font-size: 20px;
-  text-align: left;
-}
-
 .mathlessons-content {
-  order: 1;
-  padding: 220px 0 50px 0;
-  gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  padding-top: 9rem;
 }
 
 .mathlessons-arrow {
@@ -122,16 +116,6 @@
     padding: 10px 0;
   }
 
-  .mathlessons-container-mobile {
-    display: flex;
-    order: 1;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-start;
-    padding-top: 7%;
-  }
-
   .mathlessons-content {
     order: 1;
     padding: 50px 0;
@@ -148,5 +132,103 @@
   .mathlessons-arrow {
     width: 78px;
     height: 50px;
+  }
+} */
+
+.mathlessons-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.mathlessons-content {
+  padding-top: 8rem;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mathlessons-content-upper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 5rem;
+}
+
+.mathlessons-span {
+  color: #d1d0c5;
+  font-size: 32px;
+}
+
+.mathlessons-content-upper-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 3rem;
+}
+
+.mathlessons-arrow {
+  width: 80px;
+  height: 50px;
+}
+
+.mathlessons-arrow:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.mathlessons-arrow-disabled {
+  opacity: 0.2;
+}
+
+.mathlessons-arrow-disabled:hover {
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.mathlessons-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: auto;
+}
+
+.mathlessons-image {
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 600px) {
+  .mathlessons-content {
+    padding-top: 5rem;
+  }
+
+  .mathlessons-span {
+    font-size: 24px;
+  }
+
+  .mathlessons-content-upper-text {
+    padding: 0 1rem;
+  }
+
+  .mathlessons-image {
+    width: 100%;
+    height: auto;
+    transform: scale(0.95);
   }
 }

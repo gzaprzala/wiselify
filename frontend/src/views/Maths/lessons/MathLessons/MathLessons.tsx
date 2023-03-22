@@ -7,7 +7,7 @@ import style from './MathLessons.module.css';
 
 const fetchLessons = `${import.meta.env.VITE_BACKEND_URL}api/v1/lessons`;
 
-interface Lesson {
+export interface Lesson {
   id: number;
   subject: string;
   description: string;
@@ -75,7 +75,7 @@ const MathLessons: React.FC = () => {
                 {lessons[currentLessonIndex].subject}
               </span>
               <span className={style['mathlessons-span']}>
-                {lessons[currentLessonIndex].description}
+                Lekcja {lessons[currentLessonIndex].id}
               </span>
             </div>
             <img
@@ -90,11 +90,11 @@ const MathLessons: React.FC = () => {
             />
           </div>
           <div className={style['mathlessons-main']}>
-            <div className={style['mathlessons-main']}>
-              <div className={style['mathlessons-span-normal']}>
-                {lessons[currentLessonIndex].content}
-              </div>
-            </div>
+            <img
+              src={lessons[currentLessonIndex].content}
+              className={style['mathlessons-image']}
+              alt='lesson-content'
+            />
           </div>
         </div>
       )}
