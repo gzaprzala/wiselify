@@ -12,35 +12,23 @@ const Maths = () => {
       <div className={style['maths-content']}>
         <span className={style['maths-span']}>Dostępne lekcje:</span>
         <div className={style['maths-list']}>
-          <Link to='/courses/maths/lesson1'>
+          <Link to='/courses/maths/mathlessons'>
             <ThinTile name='1. Wzory skróconego mnożenia' />
           </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='2. Twierdzenie Pitagorasa' />
+          <Link to='/courses/maths/mathlessons'>
+            <ThinTile name='2. Ciąg geometryczny' />
           </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='2. Twierdzenie Pitagorasa' />
+          <Link to='/courses/maths/mathlessons'>
+            <ThinTile name='3. Twierdzenie Pitagorasa' />
           </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='3. Funkcja kwadratowa' />
+          <Link to='/courses/maths/mathlessons'>
+            <ThinTile name='4. Funkcja kwadratowa' />
           </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='4. Logarytmy' />
+          <Link to='/courses/maths/mathlessons'>
+            <ThinTile name='5. Logarytmy' />
           </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='5. Funkcje trygonometryczne' />
-          </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='6. Permutacje' />
-          </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='7. Wartość bezwzględna' />
-          </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='8. Ciąg arytmetyczny' />
-          </Link>
-          <Link to='/courses/maths/lesson1'>
-            <ThinTile name='9. Ciąg geometryczny' />
+          <Link to='/courses/maths/mathlessons'>
+            <ThinTile name='6. Funkcje trygonometryczne' />
           </Link>
         </div>
       </div>

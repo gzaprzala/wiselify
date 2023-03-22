@@ -1,4 +1,4 @@
-.lesson-container {
+.mathlessons-container {
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -8,11 +8,11 @@
   align-items: center;
 }
 
-.lesson-container-mobile {
+.mathlessons-container-mobile {
   display: none;
 }
 
-.lesson {
+.mathlessons {
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.lesson-main {
+.mathlessons-main {
   order: 3;
   width: 100%;
   display: flex;
@@ -38,14 +38,14 @@
   padding-bottom: 15px;
 }
 
-.lesson-content-upper {
+.mathlessons-content-upper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.lesson-content-upper-text {
+.mathlessons-content-upper-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,24 +53,24 @@
   padding: 0 200px;
 }
 
-.lesson-span {
+.mathlessons-span {
   order: 2;
   color: #d1d0c5;
   font-size: 32px;
 }
 
-.lesson-span-color {
+.mathlessons-span-color {
   color: #e2b714;
   font-size: 24px;
   padding: 15px 0;
 }
 
-.lesson-span-normal {
+.mathlessons-span-normal {
   font-size: 20px;
   text-align: left;
 }
 
-.lesson-content {
+.mathlessons-content {
   order: 1;
   padding: 220px 0 50px 0;
   gap: 20px;
@@ -78,46 +78,51 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: fit-content;
 }
 
-.lesson-arrow {
+.mathlessons-arrow {
   width: 100px;
   height: 61px;
 }
 
-.lesson-logo {
+.mathlessons-arrow-disabled {
+  opacity: 0.2;
+}
+
+.mathlessons-logo {
   height: 127px;
   width: 315px;
 }
 
 @media screen and (max-width: 1350px) {
-  .lesson-content-upper-text {
+  .mathlessons-content-upper-text {
     padding: 0 150px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .lesson-content-upper-text {
+  .mathlessons-content-upper-text {
     padding: 0 100px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .lesson-list {
+  .mathlessons-list {
     width: 100%;
   }
 
-  .lesson-main {
+  .mathlessons-main {
     width: 99%;
     font-size: 24px;
   }
 
-  .lesson-span-color {
+  .mathlessons-span-color {
     font-size: 24px;
     padding: 10px 0;
   }
 
-  .lesson-container-mobile {
+  .mathlessons-container-mobile {
     display: flex;
     order: 1;
     width: 100%;
@@ -127,20 +132,20 @@
     padding-top: 7%;
   }
 
-  .lesson-content {
+  .mathlessons-content {
     order: 1;
     padding: 50px 0;
   }
 
-  .lesson-span {
+  .mathlessons-span {
     font-size: 24px;
   }
 
-  .lesson-content-upper-text {
+  .mathlessons-content-upper-text {
     padding: 0 45px;
   }
 
-  .lesson-arrow {
+  .mathlessons-arrow {
     width: 78px;
     height: 50px;
   }

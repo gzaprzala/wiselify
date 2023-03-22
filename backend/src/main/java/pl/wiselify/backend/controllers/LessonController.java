@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
+@CrossOrigin("*")
 public class LessonController {
   @Autowired
   private LessonRepository lessonRepository;
@@ -34,7 +35,7 @@ public class LessonController {
   public Lesson updateLesson(@RequestBody Lesson lesson) {
     return lessonRepository.save(lesson);
   }
-  
+
   @DeleteMapping("/lessons/{id}")
   public ResponseEntity<HttpStatus> deleteLessonById(@PathVariable Long id) {
     lessonRepository.deleteById(id);
