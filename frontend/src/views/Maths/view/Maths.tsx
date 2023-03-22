@@ -39,7 +39,9 @@ const Maths = () => {
         <span className={style['maths-span']}>Dostępne lekcje:</span>
         <div className={style['maths-list']}>
           {lessons.map((lesson) => (
-            <Link to='/courses/maths/mathlessons' key={lesson.id}>
+            <Link
+              to={`/courses/maths/mathlessons/${lesson.id}`}
+              key={lesson.id}>
               <ThinTile name={`${lesson.id}. ${lesson.description}`} />
             </Link>
           ))}

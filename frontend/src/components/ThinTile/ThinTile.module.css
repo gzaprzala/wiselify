@@ -1,7 +1,7 @@
 .tile {
   display: flex;
-  height: 70px;
-  width: 500px;
+  height: 55px;
+  width: 450px;
   background: #e2b714;
   border-radius: 15px;
   color: #323437;
@@ -24,8 +24,8 @@
 
 @media screen and (max-width: 1350px) {
   .tile {
-    height: 60px;
-    width: 400px;
+    height: 55px;
+    width: 380px;
     font-size: 23px;
     font-weight: 500;
   }

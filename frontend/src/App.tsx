@@ -14,7 +14,7 @@ const App = () => {
       <Route path='/register' element={<Register />} />
       <Route path='/courses' element={<Courses />} />
       <Route path='/courses/maths' element={<Maths />} />
-      <Route path='/courses/maths/mathlessons' element={<MathLessons />} />
+      <Route path='/courses/maths/mathlessons/:id' element={<MathLessons />} />
     </Routes>
   );
 };

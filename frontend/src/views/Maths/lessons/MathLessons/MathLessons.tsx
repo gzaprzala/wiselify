@@ -4,6 +4,7 @@ import arrowright from '@assets/img/arrow-right.svg';
 import NavBar from '@/components/NavBar/NavBar';
 import { useEffect, useState } from 'react';
 import style from './MathLessons.module.css';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const fetchLessons = `${import.meta.env.VITE_BACKEND_URL}api/v1/lessons`;
 
@@ -15,18 +16,30 @@ export interface Lesson {
 }
 
 const MathLessons: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
   const [lessons, setLessons] = useState<Lesson[]>([]);
-  const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
+  const [currentLessonIndex, setCurrentLessonIndex] = useState(
+    parseInt(id ?? '', 10) - 1
+  );
+
+  const lesson = lessons.find((lesson) => lesson.id === parseInt(id ?? '', 10));
+  const navigate = useNavigate();
 
   const handlePreviousLesson = () => {
     if (currentLessonIndex > 0) {
       setCurrentLessonIndex(currentLessonIndex - 1);
+      navigate(
+        `/courses/maths/mathlessons/${lessons[currentLessonIndex - 1].id}`
+      );
     }
   };
 
   const handleNextLesson = () => {
     if (currentLessonIndex < lessons.length - 1) {
       setCurrentLessonIndex(currentLessonIndex + 1);
+      navigate(
+        `/courses/maths/mathlessons/${lessons[currentLessonIndex + 1].id}`
+      );
     }
   };
 
@@ -51,14 +64,14 @@ const MathLessons: React.FC = () => {
       });
   }, []);
 
+  console.log(currentLessonIndex);
+
   return (
     <div className={style['mathlessons-container']}>
       <MobileLogo />
       <NavBar />
-      {lessons.length > 0 && (
-        <div
-          className={style['mathlessons-content']}
-          key={lessons[currentLessonIndex].id}>
+      {lessons.length > 0 && lesson && (
+        <div className={style['mathlessons-content']} key={lesson.id}>
           <div className={style['mathlessons-content-upper']}>
             <img
               src={arrowleft}
