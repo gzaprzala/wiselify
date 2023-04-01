@@ -2,9 +2,9 @@ import MobileLogo from '@/components/MobileLogo/MobileLogo';
 import NavBar from '@/components/NavBar/NavBar';
 import ThinTile from '@/components/ThinTile/ThinTile';
 import { Link } from 'react-router-dom';
-import style from './Maths.module.css';
+import style from './MathsView.module.css';
 import { useEffect, useState } from 'react';
-import { Lesson } from '@views/Maths/lessons/MathLessons/MathLessons';
+import { Lesson } from '@/views/Maths/MathsLessons/MathsLessons';
 
 const fetchLessons = `${import.meta.env.VITE_BACKEND_URL}api/v1/lessons`;
 
@@ -40,7 +40,7 @@ const Maths = () => {
         <div className={style['maths-list']}>
           {lessons.map((lesson) => (
             <Link
-              to={`/courses/maths/mathlessons/${lesson.id}`}
+              to={`/courses/maths/mathslessons/${lesson.id}`}
               key={lesson.id}>
               <ThinTile name={`${lesson.id}. ${lesson.description}`} />
             </Link>

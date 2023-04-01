@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavBar from '@components/NavBar/NavBar';
 import Tile from '@components/Tile/Tile';
 import maths from '@assets/img/math.svg';
@@ -13,6 +13,7 @@ import chem from '@assets/img/chem.svg';
 import biol from '@assets/img/biology.svg';
 import style from './Courses.module.css';
 import MobileLogo from '@/components/MobileLogo/MobileLogo';
+import { useEffect } from 'react';
 
 const Courses = () => {
   return (

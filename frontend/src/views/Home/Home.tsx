@@ -8,6 +8,9 @@ import html from '@assets/img/html.svg';
 import MobileLogo from '@/components/MobileLogo/MobileLogo';
 import style from './Home.module.css';
 import { Link } from 'react-router-dom';
+import AuthService from '@/services/auth.service';
+
+const currentUser = AuthService.getCurrentUser();
 
 const Home = () => {
   return (

@@ -3,7 +3,7 @@ import arrowleft from '@assets/img/arrow-left.svg';
 import arrowright from '@assets/img/arrow-right.svg';
 import NavBar from '@/components/NavBar/NavBar';
 import { useEffect, useState } from 'react';
-import style from './MathLessons.module.css';
+import style from './MathsLessons.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const fetchLessons = `${import.meta.env.VITE_BACKEND_URL}api/v1/lessons`;
@@ -29,7 +29,7 @@ const MathLessons: React.FC = () => {
     if (currentLessonIndex > 0) {
       setCurrentLessonIndex(currentLessonIndex - 1);
       navigate(
-        `/courses/maths/mathlessons/${lessons[currentLessonIndex - 1].id}`
+        `/courses/maths/mathslessons/${lessons[currentLessonIndex - 1].id}`
       );
     }
   };
@@ -38,7 +38,7 @@ const MathLessons: React.FC = () => {
     if (currentLessonIndex < lessons.length - 1) {
       setCurrentLessonIndex(currentLessonIndex + 1);
       navigate(
-        `/courses/maths/mathlessons/${lessons[currentLessonIndex + 1].id}`
+        `/courses/maths/mathslessons/${lessons[currentLessonIndex + 1].id}`
       );
     }
   };
