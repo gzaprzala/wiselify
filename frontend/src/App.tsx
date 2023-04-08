@@ -1,20 +1,31 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Home from '@views/Home/Home';
 import Courses from '@views/Courses/Courses';
-import Maths from '@views/Maths/view/Maths';
+import Maths from '@/views/Maths/MathsView/MathsView';
 import Login from '@views/Login/Login';
 import Register from '@views/Register/Register';
-import MathLessons from '@/views/Maths/lessons/MathLessons/MathLessons';
+import MathsLessons from '@/views/Maths/MathsLessons/MathsLessons';
 
 const App = () => {
+  const hasUserCookie = document.cookie.includes('user=');
+
   return (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
-      <Route path='/courses' element={<Courses />} />
-      <Route path='/courses/maths' element={<Maths />} />
-      <Route path='/courses/maths/mathlessons/:id' element={<MathLessons />} />
+      <Route
+        path='/courses'
+        element={hasUserCookie ? <Courses /> : <Login />}
+      />
+      <Route
+        path='/courses/maths'
+        element={hasUserCookie ? <Maths /> : <Login />}
+      />
+      <Route
+        path='/courses/maths/mathslessons/:id'
+        element={hasUserCookie ? <MathsLessons /> : <Login />}
+      />
     </Routes>
   );
 };

@@ -57,14 +57,14 @@ const Login = () => {
             Zaloguj
           </button>
         </form>
-        {error && (
-          <div className={style['login-container-content-error']}>{error}</div>
-        )}
         <Link to='/register'>
           <span className={style['login-container-content-span-mini']}>
             Zarejestruj się
           </span>
         </Link>
+        {error && (
+          <div className={style['login-container-content-error']}>{error}</div>
+        )}
       </div>
       <Footer />
     </div>

@@ -4,10 +4,15 @@ import profile from '@assets/img/profile.svg';
 import menu from '@assets/img/menu.svg';
 import style from './NavBar.module.css';
 import { useState } from 'react';
+import AuthService from '@/services/auth.service';
 
 const NavBar = () => {
   const [profileActive, setProfileActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+
+  const handleLogout = () => {
+    AuthService.logout();
+  };
 
   return (
     <div className={style['navbar']}>
@@ -59,7 +64,10 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to='#' className={style['navbar-link']}>
+            <Link
+              to='/login'
+              onClick={handleLogout}
+              className={style['navbar-link']}>
               <span className={style['navbar-dropdown-span']}>Wyloguj się</span>
             </Link>
           </li>

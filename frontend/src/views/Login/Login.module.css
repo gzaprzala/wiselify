@@ -5,6 +5,7 @@
   flex-direction: column;
   overflow-x: hidden;
   overflow: auto;
+  color: #d1d0c5;
 }
 
 .login-container-content {
@@ -81,6 +82,11 @@
 .login-container-content-form-button:hover {
   cursor: pointer;
   opacity: 0.6;
+}
+
+.login-container-content-error {
+  color: lightcoral;
+  padding-top: 5px;
 }
 
 button {
