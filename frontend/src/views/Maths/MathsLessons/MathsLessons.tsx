@@ -15,7 +15,7 @@ export interface Lesson {
   content: string;
 }
 
-const MathLessons: React.FC = () => {
+const MathLessons = () => {
   const { id } = useParams<{ id: string }>();
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [currentLessonIndex, setCurrentLessonIndex] = useState(
@@ -56,7 +56,6 @@ const MathLessons: React.FC = () => {
         }
       })
       .then((lessons) => {
-        console.log(lessons);
         setLessons(lessons);
       })
       .catch((error) => {

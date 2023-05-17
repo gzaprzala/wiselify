@@ -38,6 +38,9 @@ public class User {
           inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles = new HashSet<>();
 
+  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  private Achievement achievements;
+
   public User() {
   }
 
@@ -45,6 +48,12 @@ public class User {
     this.username = username;
     this.email = email;
     this.password = password;
+    this.achievements = new Achievement();
+    this.achievements.setUser(this);
+  }
+
+  public Achievement getAchievements() {
+    return achievements;
   }
 
   public Long getId() {

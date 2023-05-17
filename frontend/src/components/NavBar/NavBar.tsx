@@ -7,6 +7,7 @@ import { useState } from 'react';
 import AuthService from '@/services/auth.service';
 
 const NavBar = () => {
+  const hasUserCookie = document.cookie.includes('user=');
   const [profileActive, setProfileActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
 
@@ -23,17 +24,19 @@ const NavBar = () => {
       </div>
       <ul className={style['navbar-right']}>
         <li>
-          <img
-            src={profile}
-            className={style['navbar-profile-icon']}
-            alt='profile'
-            onClick={() => {
-              menuActive
-                ? setMenuActive(!menuActive)
-                : setMenuActive(menuActive);
-              setProfileActive(!profileActive);
-            }}
-          />
+          {hasUserCookie && (
+            <img
+              src={profile}
+              className={style['navbar-profile-icon']}
+              alt='profile'
+              onClick={() => {
+                menuActive
+                  ? setMenuActive(!menuActive)
+                  : setMenuActive(menuActive);
+                setProfileActive(!profileActive);
+              }}
+            />
+          )}
         </li>
         <ul
           className={
@@ -42,12 +45,12 @@ const NavBar = () => {
               : style['navbar-profile-drop']
           }>
           <li>
-            <Link to='#' className={style['navbar-link']}>
+            <Link to='/settings' className={style['navbar-link']}>
               <span className={style['navbar-dropdown-span']}>Ustawienia</span>
             </Link>
           </li>
           <li>
-            <Link to='#' className={style['navbar-link']}>
+            <Link to='/achievements' className={style['navbar-link']}>
               <span className={style['navbar-dropdown-span']}>Osiągnięcia</span>
             </Link>
           </li>
@@ -58,16 +61,24 @@ const NavBar = () => {
               ? style['navbar-menu-drop-active']
               : style['navbar-menu-drop']
           }>
-          <li>
-            <Link to='/login' className={style['navbar-link']}>
-              <span className={style['navbar-dropdown-span']}>Zaloguj się</span>
-            </Link>
-          </li>
-          <li>
-            <span onClick={handleLogout} className={style['navbar-link']}>
-              <span className={style['navbar-dropdown-span']}>Wyloguj się</span>
-            </span>
-          </li>
+          {!hasUserCookie && (
+            <li>
+              <Link to='/login' className={style['navbar-link']}>
+                <span className={style['navbar-dropdown-span']}>
+                  Zaloguj się
+                </span>
+              </Link>
+            </li>
+          )}
+          {hasUserCookie && (
+            <li>
+              <span onClick={handleLogout} className={style['navbar-link']}>
+                <span className={style['navbar-dropdown-span']}>
+                  Wyloguj się
+                </span>
+              </span>
+            </li>
+          )}
         </ul>
         <li>
           <Link to='#' className={style['navbar-link']}>

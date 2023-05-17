@@ -12,6 +12,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import pl.wiselify.backend.models.Achievement;
 import pl.wiselify.backend.models.ERole;
 import pl.wiselify.backend.models.Role;
 import pl.wiselify.backend.models.User;
@@ -19,6 +20,7 @@ import pl.wiselify.backend.models.request.LoginRequest;
 import pl.wiselify.backend.models.request.SignupRequest;
 import pl.wiselify.backend.models.response.MessageResponse;
 import pl.wiselify.backend.models.response.UserInfoResponse;
+import pl.wiselify.backend.repositories.AchievementRepository;
 import pl.wiselify.backend.repositories.RoleRepository;
 import pl.wiselify.backend.repositories.UserRepository;
 import pl.wiselify.backend.security.jwt.JwtUtils;
@@ -43,6 +45,10 @@ public class AuthController {
   RoleRepository roleRepository;
 
   @Autowired
+  AchievementRepository achievementRepository;
+
+
+  @Autowired
   PasswordEncoder encoder;
 
   @Autowired
@@ -63,6 +69,12 @@ public class AuthController {
     List<String> roles = userDetails.getAuthorities().stream()
             .map(GrantedAuthority::getAuthority)
             .collect(Collectors.toList());
+
+    User user = userRepository.findById(userDetails.getId()).orElseThrow(() -> new RuntimeException("Nie znaleziono uzytkownika"));
+
+    Achievement achievements = user.getAchievements();
+    achievements.setLoginCount(achievements.getLoginCount() + 1);
+    achievementRepository.save(achievements);
 
     return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, jwtCookie.toString())
             .body(new UserInfoResponse(userDetails.getId(),

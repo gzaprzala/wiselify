@@ -5,6 +5,8 @@ import Maths from '@/views/Maths/MathsView/MathsView';
 import Login from '@views/Login/Login';
 import Register from '@views/Register/Register';
 import MathsLessons from '@/views/Maths/MathsLessons/MathsLessons';
+import Settings from '@/views/Settings/Settings';
+import Achievements from '@/views/Achievements/Achievements';
 
 const App = () => {
   const hasUserCookie = document.cookie.includes('user=');
@@ -17,6 +19,14 @@ const App = () => {
       <Route
         path='/courses'
         element={hasUserCookie ? <Courses /> : <Login />}
+      />
+      <Route
+        path='/settings'
+        element={hasUserCookie ? <Settings /> : <Login />}
+      />
+      <Route
+        path='/achievements'
+        element={hasUserCookie ? <Achievements /> : <Login />}
       />
       <Route
         path='/courses/maths'

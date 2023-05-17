@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 public class UserDetailsImpl implements UserDetails {
   private static final long serialVersionUID = 1L;
 
+  private User user;
+
   private Long id;
 
   private String username;
@@ -32,6 +34,14 @@ public class UserDetailsImpl implements UserDetails {
     this.email = email;
     this.password = password;
     this.authorities = authorities;
+  }
+
+  public UserDetailsImpl(User user) {
+    this.user = user;
+  }
+
+  public User getUser() {
+    return user;
   }
 
   public static UserDetailsImpl build(User user) {
