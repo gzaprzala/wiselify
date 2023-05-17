@@ -64,12 +64,9 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to='/login'
-              onClick={handleLogout}
-              className={style['navbar-link']}>
+            <span onClick={handleLogout} className={style['navbar-link']}>
               <span className={style['navbar-dropdown-span']}>Wyloguj się</span>
-            </Link>
+            </span>
           </li>
         </ul>
         <li>
