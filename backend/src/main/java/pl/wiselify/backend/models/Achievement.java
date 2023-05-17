@@ -15,6 +15,42 @@ public class Achievement {
 
   private int loginCount;
 
+  @JsonIgnore
+  private int finishedLessons;
+
+  @JsonIgnore
+  private int accountAge;
+
+  @JsonIgnore
+  private int mathTestResult;
+
+  @JsonIgnore
+  private int historyTestResult;
+
+  @JsonIgnore
+  private int javascriptTestResult;
+
+  @JsonIgnore
+  private int htmlTestResult;
+
+  @JsonIgnore
+  private int physicsTestResult;
+
+  @JsonIgnore
+  private int javaTestResult;
+
+  @JsonIgnore
+  private int pythonTestResult;
+
+  @JsonIgnore
+  private int geographyTestResult;
+
+  @JsonIgnore
+  private int chemistryTestResult;
+
+  @JsonIgnore
+  private int biologyTestResult;
+
   public Achievement() {
   }
 
