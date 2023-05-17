@@ -3,26 +3,36 @@ import style from './Achievements.module.css';
 import NavBar from '@/components/NavBar/NavBar';
 import ThinTile from '@/components/ThinTile/ThinTile';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import AuthService from '@/services/auth.service';
+
+const fetchAchievements = `${
+  import.meta.env.VITE_BACKEND_URL
+}api/v1/achievements`;
 
 const Achievements = () => {
-  // const [loginCount, setLoginCount] = useState(0);
+  const [achievements, setAchievements] = useState(Object);
+  const userId = AuthService.getCurrentUser().id;
+  const fetchLink = `${fetchAchievements}/${userId}`;
 
-  // useEffect(() => {
-  //   const fetchAchievementData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `${import.meta.env.VITE_BACKEND_URL}api/v1/achievements`
-  //       );
-  //       setLoginCount(response.data.loginCount);
-  //       console.log(loginCount);
-  //     } catch (error) {
-  //       console.log('Error fetching achievement data:', error);
-  //     }
-  //   };
-
-  //   fetchAchievementData();
-  // }, []);
+  useEffect(() => {
+    fetch(fetchLink, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((responseAchievements) => {
+        if (responseAchievements.ok) {
+          return responseAchievements.json();
+        } else {
+          throw new Error('Failed to fetch achievements');
+        }
+      })
+      .then((achievements) => {
+        setAchievements(achievements);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div className={style['achievements']}>
@@ -31,7 +41,12 @@ const Achievements = () => {
       <div className={style['achievements-content']}>
         <span className={style['achievements-span']}>Lista osiągnięć:</span>
         <div className={style['achievements-list']}>
-          <div className={style['achievements-inactive']}>
+          <div
+            className={
+              achievements.loginCount >= 5
+                ? style['achievements-active']
+                : style['achievements-inactive']
+            }>
             <ThinTile name='Zaloguj się 5 razy' />
           </div>
           <div className={style['achievements-inactive']}>

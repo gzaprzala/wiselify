@@ -1,5 +1,6 @@
 package pl.wiselify.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,6 +10,7 @@ public class Achievement {
   private Long id;
 
   @OneToOne
+  @JsonIgnore
   private User user;
 
   private int loginCount;
