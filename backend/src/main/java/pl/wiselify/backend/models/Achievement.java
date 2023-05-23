@@ -21,36 +21,6 @@ public class Achievement {
   @JsonIgnore
   private int accountAge;
 
-  @JsonIgnore
-  private int mathTestResult;
-
-  @JsonIgnore
-  private int historyTestResult;
-
-  @JsonIgnore
-  private int javascriptTestResult;
-
-  @JsonIgnore
-  private int htmlTestResult;
-
-  @JsonIgnore
-  private int physicsTestResult;
-
-  @JsonIgnore
-  private int javaTestResult;
-
-  @JsonIgnore
-  private int pythonTestResult;
-
-  @JsonIgnore
-  private int geographyTestResult;
-
-  @JsonIgnore
-  private int chemistryTestResult;
-
-  @JsonIgnore
-  private int biologyTestResult;
-
   public Achievement() {
   }
 
@@ -74,8 +44,24 @@ public class Achievement {
     return loginCount;
   }
 
+  public int getFinishedLessons() {
+    return finishedLessons;
+  }
+
+  public int getAccountAge() {
+    return accountAge;
+  }
+
   public void setLoginCount(int loginCount) {
     this.loginCount = loginCount;
+  }
+
+  public void setFinishedLessons(int finishedLessons) {
+    this.finishedLessons = finishedLessons;
+  }
+
+  public void setAccountAge(int accountAge) {
+    this.accountAge = accountAge;
   }
 }
 
