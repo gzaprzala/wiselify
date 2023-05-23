@@ -13,7 +13,6 @@ import chem from '@assets/img/chem.svg';
 import biol from '@assets/img/biology.svg';
 import style from './Courses.module.css';
 import MobileLogo from '@/components/MobileLogo/MobileLogo';
-import { useEffect } from 'react';
 
 const Courses = () => {
   return (
@@ -26,32 +25,20 @@ const Courses = () => {
           <Link to='/courses/maths'>
             <Tile name='Matematyka' image={maths} />
           </Link>
-          <Link to='/'>
+          <Link to='/courses/history'>
             <Tile name='Historia' image={history} />
           </Link>
-          <Link to='/'>
+          <Link to='/courses/javascript'>
             <Tile name='JavaScript' image={js} />
           </Link>
-          <Link to='/'>
+          <Link to='/courses/html'>
             <Tile name='HTML' image={html} />
           </Link>
-          <Link to='/'>
-            <Tile name='Fizyka' image={physics} />
-          </Link>
-          <Link to='/'>
+          <Link to='/courses/java'>
             <Tile name='Java' image={java} />
           </Link>
-          <Link to='/'>
+          <Link to='/courses/python'>
             <Tile name='Python' image={python} />
-          </Link>
-          <Link to='/'>
-            <Tile name='Geografia' image={geo} />
-          </Link>
-          <Link to='/'>
-            <Tile name='Chemia' image={chem} />
-          </Link>
-          <Link to='/'>
-            <Tile name='Biologia' image={biol} />
           </Link>
         </div>
       </div>

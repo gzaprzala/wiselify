@@ -45,13 +45,13 @@ const Home = () => {
             <Link to='/courses/maths'>
               <Tile name='Matematyka' image={maths} />
             </Link>
-            <Link to='/'>
+            <Link to='/courses/history'>
               <Tile name='Historia' image={history} />
             </Link>
-            <Link to='/'>
+            <Link to='/courses/javascript'>
               <Tile name='JavaScript' image={js} />
             </Link>
-            <Link to='/'>
+            <Link to='/courses/html'>
               <Tile name='HTML' image={html} />
             </Link>
           </div>

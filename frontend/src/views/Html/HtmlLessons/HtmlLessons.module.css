@@ -1,4 +1,4 @@
-.mathlessons-container {
+.htmllessons-container {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.mathlessons-content {
+.htmllessons-content {
   padding-top: 8rem;
   gap: 20px;
   display: flex;
@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.mathlessons-content-upper {
+.htmllessons-content-upper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,12 +24,12 @@
   height: 5rem;
 }
 
-.mathlessons-span {
+.htmllessons-span {
   color: #d1d0c5;
   font-size: 32px;
 }
 
-.mathlessons-content-upper-text {
+.htmllessons-content-upper-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,26 +39,26 @@
   padding: 0 3rem;
 }
 
-.mathlessons-arrow {
+.htmllessons-arrow {
   width: 80px;
   height: 50px;
 }
 
-.mathlessons-arrow:hover {
+.htmllessons-arrow:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.mathlessons-arrow-disabled {
+.htmllessons-arrow-disabled {
   opacity: 0.2;
 }
 
-.mathlessons-arrow-disabled:hover {
+.htmllessons-arrow-disabled:hover {
   opacity: 0.2;
   cursor: pointer;
 }
 
-.mathlessons-main {
+.htmllessons-main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,7 @@
   overflow: auto;
 }
 
-.mathlessons-image {
+.htmllessons-image {
   width: 80%;
   height: auto;
   border-radius: 15px;
@@ -76,19 +76,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  .mathlessons-content {
+  .htmllessons-content {
     padding-top: 5rem;
   }
 
-  .mathlessons-span {
+  .htmllessons-span {
     font-size: 24px;
   }
 
-  .mathlessons-content-upper-text {
+  .htmllessons-content-upper-text {
     padding: 0 1rem;
   }
 
-  .mathlessons-image {
+  .htmllessons-image {
     width: 100%;
     height: auto;
     transform: scale(0.95);

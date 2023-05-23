@@ -2,13 +2,13 @@ import MobileLogo from '@/components/MobileLogo/MobileLogo';
 import NavBar from '@/components/NavBar/NavBar';
 import ThinTile from '@/components/ThinTile/ThinTile';
 import { Link } from 'react-router-dom';
-import style from './MathsView.module.css';
+import style from './HtmlView.module.css';
 import { useEffect, useState } from 'react';
-import { Lesson } from '@/views/Maths/MathsLessons/MathsLessons';
+import { Lesson } from '@/views/Html/HtmlLessons/HtmlLessons';
 
 const fetchLessons = `${import.meta.env.VITE_BACKEND_URL}api/v1/lessons`;
 
-const MathsView = () => {
+const HtmlView = () => {
   const [lessons, setLessons] = useState<Lesson[]>([]);
 
   useEffect(() => {
@@ -24,10 +24,10 @@ const MathsView = () => {
         }
       })
       .then((lessons) => {
-        const mathLessons = lessons.filter(
-          (lesson: Lesson) => lesson.subject === 'Matematyka'
+        const htmlLessons = lessons.filter(
+          (lesson: Lesson) => lesson.subject === 'Html'
         );
-        setLessons(mathLessons);
+        setLessons(htmlLessons);
       })
       .catch((error) => {
         console.error(error);
@@ -35,16 +35,14 @@ const MathsView = () => {
   }, []);
 
   return (
-    <div className={style['maths-container']}>
+    <div className={style['html-container']}>
       <MobileLogo />
       <NavBar />
-      <div className={style['maths-content']}>
-        <span className={style['maths-span']}>Dostępne lekcje:</span>
-        <div className={style['maths-list']}>
+      <div className={style['html-content']}>
+        <span className={style['html-span']}>Dostępne lekcje:</span>
+        <div className={style['html-list']}>
           {lessons.map((lesson) => (
-            <Link
-              to={`/courses/maths/mathslessons/${lesson.id}`}
-              key={lesson.id}>
+            <Link to={`/courses/html/htmllessons/${lesson.id}`} key={lesson.id}>
               <ThinTile name={`${lesson.description}`} />
             </Link>
           ))}
@@ -54,4 +52,4 @@ const MathsView = () => {
   );
 };
 
-export default MathsView;
+export default HtmlView;
