@@ -6,4 +6,5 @@ import pl.wiselify.backend.models.Result;
 
 @Repository
 public interface ResultRepository extends JpaRepository<Result, Long> {
+  Result findByUserId(String userId);
 }

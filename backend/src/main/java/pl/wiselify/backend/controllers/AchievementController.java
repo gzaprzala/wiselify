@@ -19,9 +19,12 @@ public class AchievementController {
   }
 
   @GetMapping("/{userId}")
-  public ResponseEntity<Achievement> getUserAchievements(@PathVariable("userId") Long userId) {
-    Achievement achievement = achievementRepository.findById(userId)
-            .orElse(null);
+  public ResponseEntity<Achievement> getUserAchievements(@PathVariable("userId") String userId) {
+    Achievement achievement = achievementRepository.findByUserId(userId);
+
+    System.out.println("test");
+    System.out.println(achievement);
+    System.out.println(userId);
 
     if (achievement != null) {
       return new ResponseEntity<>(achievement, HttpStatus.OK);

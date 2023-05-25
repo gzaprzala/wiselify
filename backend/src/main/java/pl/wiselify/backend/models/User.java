@@ -41,6 +41,9 @@ public class User {
   @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   private Achievement achievements;
 
+  @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+  private Result results;
+
   public User() {
   }
 
@@ -49,11 +52,17 @@ public class User {
     this.email = email;
     this.password = password;
     this.achievements = new Achievement();
+    this.results = new Result();
     this.achievements.setUser(this);
+    this.results.setUser(this);
   }
 
   public Achievement getAchievements() {
     return achievements;
+  }
+
+  public Result getResults() {
+    return results;
   }
 
   public Long getId() {

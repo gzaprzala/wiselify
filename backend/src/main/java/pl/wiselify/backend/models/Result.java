@@ -13,7 +13,6 @@ public class Result {
   @JsonIgnore
   private User user;
 
-  @JsonIgnore
   private int mathTestResult;
 
   @JsonIgnore
@@ -42,6 +41,22 @@ public class Result {
 
   public void setUser(User user) {
     this.user = user;
+  }
+
+  public void setMathTestResult(int mathTestResult) {
+    this.mathTestResult = mathTestResult;
+  }
+
+  public void setHistoryTestResult(int historyTestResult) {
+    this.historyTestResult = historyTestResult;
+  }
+
+  public void setJavascriptTestResult(int javascriptTestResult) {
+    this.javascriptTestResult = javascriptTestResult;
+  }
+
+  public void setHtmlTestResult(int htmlTestResult) {
+    this.htmlTestResult = htmlTestResult;
   }
 
   public int getMathTestResult() {

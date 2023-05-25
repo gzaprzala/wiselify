@@ -6,5 +6,6 @@ import pl.wiselify.backend.models.Achievement;
 
 @Repository
 public interface AchievementRepository extends JpaRepository<Achievement, Long> {
+  Achievement findByUserId(String userId);
 }
 

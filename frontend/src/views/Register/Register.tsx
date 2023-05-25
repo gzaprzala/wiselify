@@ -37,16 +37,48 @@ const Register = () => {
       return;
     }
 
+    if (!validateUsername(username)) {
+      setError('Nazwa użytkownika powinna zawierać od 8 do 20 znaków');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Nieprawidłowy adres email');
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      setError(
+        'Hasło powinno zawierać od 8 do 50 znaków oraz przynajmniej jedną wielką literę, jeden znak specjalny i cyfrę'
+      );
+      return;
+    }
+
     const data = await AuthService.register(username, email, password).then(
       () => {
         window.location.href = '/login';
       },
       (error) => {
         setError(
-          'Podano złe dane. Nazwa użytkownika (3-20 znaków) lub hasło (6-40 znaków)'
+          'Nazwa użytkownika powinna zawierać od 8 do 20 znaków, hasło powinno zawierać od 8 do 50 znaków oraz przynajmniej jedną wielką literę, jeden znak specjalny i cyfrę.'
         );
       }
     );
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateUsername = (username: string) => {
+    const usernameRegex = /^.{8,20}$/;
+    return usernameRegex.test(username);
+  };
+
+  const validatePassword = (password: string) => {
+    const passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&+=]).{8,50}$/;
+    return passwordRegex.test(password);
   };
 
   return (
