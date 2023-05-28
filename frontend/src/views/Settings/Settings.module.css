@@ -1,0 +1,117 @@
+.settings-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow: auto;
+  color: #d1d0c5;
+}
+
+.settings-container-content {
+  padding-top: 6rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  overflow-x: hidden;
+  gap: 3rem;
+}
+
+.settings-container-content-form {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.settings-container-content-span {
+  font-size: 32px;
+  color: #d1d0c5;
+  padding-bottom: 1rem;
+}
+
+.settings-container-content-span:hover {
+  cursor: default;
+}
+
+.settings-container-content-span-mini {
+  font-size: 12px;
+  color: #d1d0c5;
+  padding-top: 0.5rem;
+}
+
+.settings-container-content-span-mini:hover {
+  opacity: 0.6;
+}
+
+.settings-container-content-form-input {
+  background-color: #2c2e31;
+  height: 3rem;
+  width: 18rem;
+  border: none;
+  outline: none;
+  padding: 0;
+  border-radius: 15px;
+  color: #d1d0c5;
+  padding-left: 1rem;
+}
+
+.settings-container-content-form-input::placeholder {
+  font-weight: 400;
+}
+
+.settings-container-content-form-button {
+  background-color: #e2b714;
+  color: #323437;
+  font-size: 20px;
+  height: 2.5rem;
+  width: 8rem;
+  align-self: center;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.settings-container-content-form-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.settings-container-content-error {
+  color: lightcoral;
+  padding-top: 5px;
+  text-align: center;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .settings-container-content {
+    padding-top: 0;
+    justify-content: flex-start;
+  }
+
+  .settings-container-content-span {
+    padding-top: 8rem;
+  }
+
+  .settings-container-content-span-mini {
+    padding-bottom: 10rem;
+  }
+}

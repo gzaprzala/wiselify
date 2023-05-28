@@ -62,8 +62,10 @@ public class WebSecurityConfig {
             .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
             .authorizeHttpRequests()
-            .requestMatchers("/api/v1/**", "/api/auth/**")
+            .requestMatchers("/api/v1/**", "/api/auth/signin", "/api/auth/signup", "/api/auth/signout")
             .permitAll()
+            .requestMatchers("/api/auth/change-email/**")
+            .authenticated()
             .anyRequest()
             .permitAll()
     ;

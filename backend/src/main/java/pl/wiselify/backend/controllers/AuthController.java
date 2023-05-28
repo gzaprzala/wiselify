@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,9 @@ import pl.wiselify.backend.models.Achievement;
 import pl.wiselify.backend.models.ERole;
 import pl.wiselify.backend.models.Role;
 import pl.wiselify.backend.models.User;
+import pl.wiselify.backend.models.request.EmailChangeRequest;
 import pl.wiselify.backend.models.request.LoginRequest;
+import pl.wiselify.backend.models.request.PasswordChangeRequest;
 import pl.wiselify.backend.models.request.SignupRequest;
 import pl.wiselify.backend.models.response.MessageResponse;
 import pl.wiselify.backend.models.response.UserInfoResponse;
@@ -138,4 +141,28 @@ public class AuthController {
     return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString())
             .body(new MessageResponse("Pomyslnie wylogowano!"));
   }
+
+  @PostMapping("/change-email/{userId}")
+  public ResponseEntity<?> changeEmail(@Valid @RequestBody EmailChangeRequest emailChangeRequest, @PathVariable("userId") String userId) {
+
+    User user = userRepository.findById(Long.valueOf(userId)).orElseThrow(() -> new RuntimeException("Nie znaleziono użytkownika"));
+
+    user.setEmail(emailChangeRequest.getNewEmail());
+    userRepository.save(user);
+
+    return ResponseEntity.ok(new MessageResponse("Zmieniono email użytkownika"));
+  }
+
+  @PostMapping("/change-password/{userId}")
+  public ResponseEntity<?> changePassword(@Valid @RequestBody PasswordChangeRequest passwordChangeRequest, @PathVariable("userId") String userId) {
+
+    User user = userRepository.findById(Long.valueOf(userId)).orElseThrow(() -> new RuntimeException("Nie znaleziono użytkownika"));
+
+    user.setPassword(encoder.encode(passwordChangeRequest.getNewPassword()));
+    userRepository.save(user);
+
+    return ResponseEntity.ok(new MessageResponse("Zmieniono hasło użytkownika"));
+  }
+
+
 }

@@ -105,9 +105,9 @@ const MathLessons = () => {
         }
       })
       .then((lessons) => {
-        const mathLessons = lessons.filter(
-          (lesson: Lesson) => lesson.subject === 'Matematyka'
-        );
+        const mathLessons = lessons
+          .filter((lesson: Lesson) => lesson.subject === 'Matematyka')
+          .sort((a: { id: number }, b: { id: number }) => a.id - b.id);
         setLessons(mathLessons);
         setCurrentLessonIndex(parseInt(id ?? '', 10) - mathLessons[0].id);
       })
