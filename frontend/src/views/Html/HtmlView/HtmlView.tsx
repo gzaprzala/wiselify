@@ -24,9 +24,9 @@ const HtmlView = () => {
         }
       })
       .then((lessons) => {
-        const htmlLessons = lessons.filter(
-          (lesson: Lesson) => lesson.subject === 'Html'
-        );
+        const htmlLessons = lessons
+          .filter((lesson: Lesson) => lesson.subject === 'Html')
+          .sort((a: { id: number }, b: { id: number }) => a.id - b.id);
         setLessons(htmlLessons);
       })
       .catch((error) => {

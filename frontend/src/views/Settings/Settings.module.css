@@ -18,7 +18,7 @@
   justify-content: center;
   overflow: auto;
   overflow-x: hidden;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .settings-container-content-form {

@@ -57,17 +57,21 @@ const Achievements = () => {
             }>
             <ThinTile name='Zaloguj się 50 razy' />
           </div>
-          <div className={style['achievements-inactive']}>
-            <ThinTile name='Przejrzyj 5 lekcji' />
+          <div
+            className={
+              achievements.loginCount >= 100
+                ? style['achievements-active']
+                : style['achievements-inactive']
+            }>
+            <ThinTile name='Zaloguj się 100 razy' />
           </div>
-          <div className={style['achievements-inactive']}>
-            <ThinTile name='Przejrzyj 50 lekcji' />
-          </div>
-          <div className={style['achievements-inactive']}>
-            <ThinTile name='Posiadaj konto minimum 5 dni' />
-          </div>
-          <div className={style['achievements-inactive']}>
-            <ThinTile name='Posiadaj konto minimum 50 dni' />
+          <div
+            className={
+              achievements.loginCount >= 200
+                ? style['achievements-active']
+                : style['achievements-inactive']
+            }>
+            <ThinTile name='Zaloguj się 200 razy' />
           </div>
         </div>
       </div>

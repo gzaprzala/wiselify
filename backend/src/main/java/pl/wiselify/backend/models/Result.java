@@ -15,14 +15,15 @@ public class Result {
 
   private int mathTestResult;
 
-  @JsonIgnore
   private int historyTestResult;
 
-  @JsonIgnore
   private int javascriptTestResult;
 
-  @JsonIgnore
   private int htmlTestResult;
+
+  private int javaTestResult;
+
+  private int pythonTestResult;
 
   public Result() {
   }
@@ -59,6 +60,14 @@ public class Result {
     this.htmlTestResult = htmlTestResult;
   }
 
+  public void setJavaTestResult(int javaTestResult) {
+    this.javaTestResult = javaTestResult;
+  }
+
+  public void setPythonTestResult(int pythonTestResult) {
+    this.pythonTestResult = pythonTestResult;
+  }
+
   public int getMathTestResult() {
     return mathTestResult;
   }
@@ -73,6 +82,14 @@ public class Result {
 
   public int getHtmlTestResult() {
     return htmlTestResult;
+  }
+
+  public int getJavaTestResult() {
+    return javaTestResult;
+  }
+
+  public int getPythonTestResult() {
+    return pythonTestResult;
   }
 }
 

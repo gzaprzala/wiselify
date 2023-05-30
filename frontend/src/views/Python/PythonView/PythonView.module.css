@@ -1,0 +1,71 @@
+.python {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.python-list {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.python-span {
+  color: #d1d0c5;
+  font-size: 32px;
+}
+
+.python-content {
+  padding: 220px 0 50px 0;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1350px) {
+  .python-list {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .python-list {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .python-list {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .python-list {
+    width: 80%;
+    padding-bottom: 2rem;
+  }
+
+  .python-content {
+    order: 1;
+    padding: 30px 0;
+  }
+
+  .python-span {
+    font-size: 24px;
+  }
+}

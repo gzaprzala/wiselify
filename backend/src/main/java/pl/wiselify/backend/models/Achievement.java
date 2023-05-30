@@ -15,12 +15,6 @@ public class Achievement {
 
   private int loginCount;
 
-  @JsonIgnore
-  private int finishedLessons;
-
-  @JsonIgnore
-  private int accountAge;
-
   public Achievement() {
   }
 
@@ -44,25 +38,10 @@ public class Achievement {
     return loginCount;
   }
 
-  public int getFinishedLessons() {
-    return finishedLessons;
-  }
-
-  public int getAccountAge() {
-    return accountAge;
-  }
-
   public void setLoginCount(int loginCount) {
     this.loginCount = loginCount;
   }
 
-  public void setFinishedLessons(int finishedLessons) {
-    this.finishedLessons = finishedLessons;
-  }
-
-  public void setAccountAge(int accountAge) {
-    this.accountAge = accountAge;
-  }
 }
 
 

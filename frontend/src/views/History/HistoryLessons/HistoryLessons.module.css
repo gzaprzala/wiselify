@@ -1,0 +1,149 @@
+.historylessons-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.historylessons-content {
+  padding-top: 8rem;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 750px !important;
+}
+
+.historylessons-content-upper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+.historylessons-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d1d0c5;
+  font-size: 1.2rem;
+}
+
+.historylessons-test {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historylessons-span {
+  color: #d1d0c5;
+  font-size: 32px;
+}
+
+.historylessons-content-upper-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 3rem;
+}
+
+.historylessons-arrow {
+  width: 80px;
+  height: 50px;
+}
+
+.historylessons-arrow:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.historylessons-arrow-disabled {
+  opacity: 0.2;
+}
+
+.historylessons-arrow-disabled:hover {
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.historylessons-main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: auto;
+}
+
+.historylessons-answers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 936px;
+  color: #d1d0c5;
+  border-radius: 0 !important;
+  font-size: 1.2rem;
+}
+
+.historylessons-answer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+.historylessons-number {
+  color: #e2b714;
+  font-weight: 600;
+}
+
+.historylessons-submit {
+  background-color: #e2b714;
+  color: #323437;
+  font-size: 18px;
+  height: 2rem;
+  width: 5rem;
+  align-self: center;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.historylessons-image {
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 600px) {
+  .historylessons-content {
+    padding-top: 5rem;
+  }
+
+  .historylessons-span {
+    font-size: 24px;
+  }
+
+  .historylessons-content-upper-text {
+    padding: 0 1rem;
+  }
+
+  .historylessons-image {
+    width: 100%;
+    height: auto;
+    transform: scale(0.95);
+  }
+}
